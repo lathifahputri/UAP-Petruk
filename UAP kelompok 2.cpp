@@ -59,3 +59,54 @@ void print(stack<int> x){
             keranjang.pop();
         }
 }
+
+int main(){
+	int pilih;
+	do{
+		if(!pangan.empty()){
+			cout << "Daftar Belanjaan sayurku : " << endl;
+			print(pangan);
+		}else{
+		    cout << "[Keranjang Sayur Anda masih kosong]" << endl;
+		    cout << "--------------------------------------" << endl;
+		}
+    display();
+    	cout <<"-------------------------------------------" << endl;
+   	    cout <<"Program Checkout Sayurqeu" << endl;
+  	    cout <<"1. Tambah Sayuran ke dalam keranjang" << endl;
+        cout <<"2. Hapus Sayuran dari keranjang" << endl;
+        cout <<"3. Total Belanjaan" << endl;
+    	cout <<"Masukkan Pilihan anda : ";
+    cin >> pilih;
+       switch (pilih){
+       	case 1 : push();
+       			break;
+       			
+        case 2 : pop();
+        		break;
+        		
+        case 3 :if(total!=0){
+        	    cout << "---------------------------------------------------" << endl;
+				cout <<"Total Belanja Sayuran anda : Rp"<< total << endl;
+				cout <<"Silahkan melanjutkan pembayaran ke kasir" << endl;
+				cout << "---------------------------------------------------" << endl;
+				getch();
+				return 0;
+				
+		       }else{
+		       	cout << "---------------------------------------------------" << endl;
+		       	cout<< "Maaf Silahkan masukkan Sayuran yang ingin anda beli!" << endl;
+			   }
+        		break;
+        		
+        default:
+        	cout << "Inputan Anda Salah , silahkan masukkan inputan yang tersedia!" << endl;
+            system("pause");
+        	break;
+   	   }
+   	   	 getch();
+   	  	 system("cls");
+	}while(pilih != 4);
+	
+		return 0;
+}
