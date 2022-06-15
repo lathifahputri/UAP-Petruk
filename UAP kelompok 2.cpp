@@ -42,3 +42,20 @@ void pop(){
     }
     getch();
 }
+
+void display(){
+    cout << ">SAYURAN TUBABA<" << endl;
+    for(int i = 0; i<10; i++){
+        cout << tanaman[i] << endl;
+    }
+}
+
+void print(stack<int> x){
+    stack<int> keranjang = x;
+        while (!keranjang.empty()){
+            cout << "Sayuran : " << tanaman[keranjang.top()-1] << endl;
+            cout << "Harga : Rp." << harga[keranjang.top()-1]  << endl;
+            cout << "--------------------------------------" << endl;
+            keranjang.pop();
+        }
+}
