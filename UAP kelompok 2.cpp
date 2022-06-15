@@ -42,4 +42,3 @@ void pop(){
     }
     getch();
 }
-//ipehlaaiep
